@@ -14,33 +14,35 @@ Persons := [
   LastName := "Felsch",
   FirstNames := "Volkmar",
   IsAuthor := true,
-  IsMaintainer := true,
+  IsMaintainer := false,
   Email := "Volkmar.Felsch@math.rwth-aachen.de",
   WWWHome := "http://www.math.rwth-aachen.de/LDFM/homes/Volkmar.Felsch/",
   Place := "Aachen",
-  Institution := "Lehrstuhl D f&uuml;r Mathematik, RWTH Aachen"
+  Institution := "Lehrstuhl D für Mathematik, RWTH Aachen"
   ),
   rec(
   LastName := "Hippe",
   FirstNames := "Ludger",
   IsAuthor := true,
   IsMaintainer := false,
-  Email := "",
-  WWWHome := "",
-  Place := "",
-  Institution := ""
   ),
   rec(
-  LastName := "Neub&uuml;ser",
+  LastName := "Neubüser",
   FirstNames := "Joachim",
   IsAuthor := true,
-  IsMaintainer := true,
+  IsMaintainer := false,
   Email := "Joachim.Neubueser@math.rwth-aachen.de",
   WWWHome := "http://www.math.rwth-aachen.de/LDFM/homes/Joachim.Neubueser/",
   Place := "Aachen",
-  Institution := "Lehrstuhl D f&uuml;r Mathematik, RWTH Aachen"
-  )
-  
+  Institution := "Lehrstuhl D für Mathematik, RWTH Aachen"
+  ),
+  rec(
+    LastName      := "GAP Team",
+    FirstNames    := "The",
+    IsAuthor      := false,
+    IsMaintainer  := true,
+    Email         := "support@gap-system.org",
+  ),
 ],
 
 Status := "accepted",
