@@ -6,8 +6,8 @@ SetPackageInfo( rec(
 
 PackageName := "ITC",
 Subtitle := "Interactive Todd-Coxeter",
-Version := "1.4",
-Date := "06/01/2004",
+Version := "1.5",
+Date := "13/06/2018",
 
 Persons := [
   rec(
@@ -25,10 +25,6 @@ Persons := [
   FirstNames := "Ludger",
   IsAuthor := true,
   IsMaintainer := false,
-  Email := "",
-  WWWHome := "",
-  Place := "",
-  Institution := ""
   ),
   rec(
   LastName := "Neubüser",

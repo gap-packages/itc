@@ -1,6 +1,6 @@
 name: ITC
-version: 1.4
-date: 2004-01-06
+version: 1.5
+date: 2018-06-13
 description: |
     Interactive Todd-Coxeter
 
@@ -8,7 +8,6 @@ authors:
     - name: Volkmar Felsch
       url: http://www.math.rwth-aachen.de/LDFM/homes/Volkmar.Felsch/
     - name: Ludger Hippe
-      url: 
     - name: Joachim Neubüser
       url: http://www.math.rwth-aachen.de/LDFM/homes/Joachim.Neubueser/
 
@@ -29,7 +28,7 @@ packageinfo: https://gap-packages.github.io/itc/PackageInfo.g
 
 downloads:
     - name: .tar.gz
-      url: https://github.com/gap-packages/itc/releases/download/v1.4/itc-1.4.tar.gz
+      url: https://github.com/gap-packages/itc/releases/download/v1.5/itc-1.5.tar.gz
 
 abstract: |
     This <span class="pkgname">GAP</span> package provides    access to interactive Todd-Coxeter computations    with finitely presented groups.
@@ -41,24 +40,27 @@ keywords: |
     interactive Todd-Coxeter, coset enumeration.
 citeas: |
     <p class='BibEntry'>
-    [<span class='BibKey'>FHNT04</span>]   <b class='BibAuthor'>Felsch, V., Hippe, L., Neubüser, J. and GAP Team, T.</b>,
+    [<span class='BibKey'>FHNT18</span>]   <b class='BibAuthor'>Felsch, V., Hippe, L., Neubüser, J. and GAP Team, T.</b>,
      <i class='BibTitle'>ITC, Interactive Todd-Coxeter,
-             Version 1.4</i>
-     (<span class='BibYear'>2004</span>)<br />
+             Version 1.5</i>
+     (<span class='BibYear'>2018</span>)<br />
     (<span class='BibNote'>Refereed GAP package</span>),
     <span class='BibHowpublished'><a href="https://gap-packages.github.io/itc/">https://gap-packages.github.io/itc/</a></span>.
     </p>
     
 
 bibtex: |
-    @misc{ ITC1.4,
-      author =           {Felsch, V. and Hippe, L. and Neub{\"u}ser, J. and GAP Team, T.},
-      title =            {{ITC}, Interactive Todd-Coxeter, {V}ersion 1.4},
-      month =            {Jan},
-      year =             {2004},
+    @misc{ ITC1.5,
+      author =           {Felsch,  V. and Hippe, L. and Neub{\"u}ser, J. and GAP
+                          Team, T.},
+      title =            {{ITC}, Interactive Todd-Coxeter, {V}ersion 1.5},
+      month =            {Jun},
+      year =             {2018},
       note =             {Refereed GAP package},
-      howpublished =     {\href {https://gap-packages.github.io/itc/} {\texttt{https://gap-packages.github.io/}\discretionary {}{}{}\texttt{itc/}}},
+      howpublished =     {\href            {https://gap-packages.github.io/itc/}
+                          {\texttt{https://gap-packages.github.io/}\discretionary
+                          {}{}{}\texttt{itc/}}},
       keywords =         {interactive Todd-Coxeter; coset enumeration},
-      printedkey =       {FHNT04}
+      printedkey =       {FHNT18}
     }
 
