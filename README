@@ -20,5 +20,5 @@ any other GAP root directory) with the following command:
 
 Then you can load the ITC package in an XGAP session by the command
 
-   gap> RequirePackage( "itc" );
+   gap> LoadPackage( "itc" );
 
