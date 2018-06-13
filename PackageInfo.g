@@ -1,102 +1,117 @@
 #############################################################################
 ##  
-##  Demo PackageInfo.g for the GitHubPagesForGAP
-##
+##  PackageInfo.g for the package `ITC'                        Volkmar Felsch
 
 SetPackageInfo( rec(
 
-PackageName := "GitHubPagesForGAP",
-
-Subtitle := "A GitHub Pages generator for GAP packages",
-Version := "0.2",
-Date := "04/02/2017", # dd/mm/yyyy format
+PackageName := "ITC",
+Subtitle := "Interactive Todd-Coxeter",
+Version := "1.4",
+Date := "06/01/2004",
 
 Persons := [
   rec(
-    LastName      := "Horn",
-    FirstNames    := "Max",
-    IsAuthor      := true,
-    IsMaintainer  := true,
-    Email         := "max.horn@math.uni-giessen.de",
-    WWWHome       := "http://www.quendi.de/math",
-    PostalAddress := Concatenation(
-                       "AG Algebra\n",
-                       "Mathematisches Institut\n",
-                       "Justus-Liebig-Universität Gießen\n",
-                       "Arndtstraße 2\n",
-                       "35392 Gießen\n",
-                       "Germany" ),
-    Place         := "Gießen",
-    Institution   := "Justus-Liebig-Universität Gießen"
+  LastName := "Felsch",
+  FirstNames := "Volkmar",
+  IsAuthor := true,
+  IsMaintainer := false,
+  Email := "Volkmar.Felsch@math.rwth-aachen.de",
+  WWWHome := "http://www.math.rwth-aachen.de/LDFM/homes/Volkmar.Felsch/",
+  Place := "Aachen",
+  Institution := "Lehrstuhl D für Mathematik, RWTH Aachen"
   ),
-
   rec(
-    LastName      := "Thor",
-    FirstNames    := "A. U.",
-    IsAuthor      := true,
-    IsMaintainer  := false,
-    #Email         := "author@example.com",
+  LastName := "Hippe",
+  FirstNames := "Ludger",
+  IsAuthor := true,
+  IsMaintainer := false,
+  Email := "",
+  WWWHome := "",
+  Place := "",
+  Institution := ""
   ),
-
   rec(
-    LastName      := "Itor",
-    FirstNames    := "Jan",
+  LastName := "Neubüser",
+  FirstNames := "Joachim",
+  IsAuthor := true,
+  IsMaintainer := false,
+  Email := "Joachim.Neubueser@math.rwth-aachen.de",
+  WWWHome := "http://www.math.rwth-aachen.de/LDFM/homes/Joachim.Neubueser/",
+  Place := "Aachen",
+  Institution := "Lehrstuhl D für Mathematik, RWTH Aachen"
+  ),
+  rec(
+    LastName      := "GAP Team",
+    FirstNames    := "The",
     IsAuthor      := false,
     IsMaintainer  := true,
-    #Email         := "janitor@example.com",
+    Email         := "support@gap-system.org",
   ),
 ],
 
-Status := "other",
+Status := "accepted",
+CommunicatedBy := "Edmund F. Robertson (St Andrews)",
+AcceptDate := "03/2000",
 
-# The following are not strictly necessary in your own PackageInfo.g
-# (in the sense that update.g only looks at the usual fields
-# like PackageWWWHome, ArchiveURL etc.). But they are convenient
-# if you use exactly the scheme for your package website that we propose.
-GithubUser := "gap-system",
-GithubRepository := ~.PackageName,
-GithubWWW := Concatenation("https://github.com/", ~.GithubUser, "/", ~.GithubRepository),
+PackageWWWHome  := "https://gap-packages.github.io/itc/",
+README_URL      := Concatenation( ~.PackageWWWHome, "README" ),
+PackageInfoURL  := Concatenation( ~.PackageWWWHome, "PackageInfo.g" ),
+SourceRepository := rec(
+    Type := "git",
+    URL := "https://github.com/gap-packages/itc",
+),
+IssueTrackerURL := Concatenation( ~.SourceRepository.URL, "/issues" ),
+ArchiveURL      := Concatenation( ~.SourceRepository.URL,
+                                 "/releases/download/v", ~.Version,
+                                 "/itc-", ~.Version ),
+ArchiveFormats := ".tar.gz",
 
-PackageWWWHome := Concatenation("https://", ~.GithubUser, ".github.io/", ~.GithubRepository, "/"),
-README_URL     := Concatenation( ~.PackageWWWHome, "README.md" ),
-PackageInfoURL := Concatenation( ~.PackageWWWHome, "PackageInfo.g" ),
-# The following assumes you are using the Github releases system. If not, adjust
-# it accordingly.
-ArchiveURL     := Concatenation(~.GithubWWW,
-                    "/releases/download/v", ~.Version, "/",
-                    ~.GithubRepository, "-", ~.Version),
-
-ArchiveFormats := ".tar.gz .tar.bz2",
-
-AbstractHTML := 
-  "This is a pseudo package that contains no actual\
-  <span class=\"pkgname\">GAP</span> code. Instead, it is a template for other\
-  GAP packages that allows to quickly setup GitHub Pages.",
+AbstractHTML :=
+  "This <span class=\"pkgname\">GAP</span> package provides \
+   access to interactive Todd-Coxeter computations \
+   with finitely presented groups.",
 
 PackageDoc := rec(
-  BookName  := "GitHubPagesForGAP",
-  ArchiveURLSubset := ["doc"],
-  HTMLStart := "doc/chap0.html",
-  PDFFile   := "doc/manual.pdf",
-  SixFile   := "doc/manual.six",
-  LongTitle := "A GitHub Pages generator for GAP packages",
+  BookName := "ITC",
+  ArchiveURLSubset := ["doc", "htm"],
+  HTMLStart := "htm/chapters.htm",
+  PDFFile := "doc/manual.pdf",
+  SixFile := "doc/manual.six",
+  LongTitle := "Interactive Todd-Coxeter computations",
+  Autoload := true
 ),
 
-# The following dependencies are fake and for testing / demo purposes
 Dependencies := rec(
-  GAP := ">=4.8.1",
-  NeededOtherPackages := [
-    ["GAPDoc", ">= 1.2"],
-    ["IO", ">= 4.1"],
-  ],
-  SuggestedOtherPackages := [["orb", ">= 4.2"]],
+  GAP := "4.8",
+  NeededOtherPackages := [["xgap", ">= 4.02"]],
+  SuggestedOtherPackages := [],
   ExternalConditions := []
+                      
 ),
 
-AvailabilityTest := ReturnTrue,
+AvailabilityTest := function()
+      local test;
+      test:= TestPackageAvailability( "xgap", "4.02" );
+      if   test = fail then
+        Info( InfoWarning, 1,
+          "Package `itc' needs package `xgap' version at least 4.02" );
+      elif test <> true then
+        Info( InfoWarning, 1,
+          "Package `itc' must be loaded from XGAP" );
+      fi;
+      return test = true;
+    end,
 
-Keywords := ["GitHub Pages", "GAP"]
+BannerString := Concatenation(
+    "\n",
+    "          Loading  ITC ", ~.Version, "  (", ~.Subtitle, ")\n",
+    "            by V. Felsch, L. Hippe, and J. Neubueser\n",
+    "              (", ~.Persons[1].Email, ")\n\n" ),
+
+Autoload := false,
+
+#TestFile := "tst/testall.g",
+
+Keywords := ["interactive Todd-Coxeter", "coset enumeration"]
 
 ));
-
-
