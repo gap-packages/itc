@@ -9,10 +9,6 @@ Subtitle := "Interactive Todd-Coxeter",
 Version := "1.4",
 Date := "06/01/2004",
 
-ArchiveURL := "http://www.math.rwth-aachen.de/~Volkmar.Felsch/itc/itc-1p4",
-
-ArchiveFormats := ".zoo",
-
 Persons := [
   rec(
   LastName := "Felsch",
@@ -48,21 +44,26 @@ Persons := [
 ],
 
 Status := "accepted",
-
 CommunicatedBy := "Edmund F. Robertson (St Andrews)",
 AcceptDate := "03/2000",
 
-README_URL :=
-  "http://www.math.rwth-aachen.de/~Volkmar.Felsch/itc/README",
-PackageInfoURL :=
-  "http://www.math.rwth-aachen.de/~Volkmar.Felsch/itc/PackageInfo.g",
+PackageWWWHome  := "https://gap-packages.github.io/itc/",
+README_URL      := Concatenation( ~.PackageWWWHome, "README" ),
+PackageInfoURL  := Concatenation( ~.PackageWWWHome, "PackageInfo.g" ),
+SourceRepository := rec(
+    Type := "git",
+    URL := "https://github.com/gap-packages/itc",
+),
+IssueTrackerURL := Concatenation( ~.SourceRepository.URL, "/issues" ),
+ArchiveURL      := Concatenation( ~.SourceRepository.URL,
+                                 "/releases/download/v", ~.Version,
+                                 "/itc-", ~.Version ),
+ArchiveFormats := ".tar.gz",
 
 AbstractHTML :=
   "This <span class=\"pkgname\">GAP</span> package provides \
    access to interactive Todd-Coxeter computations \
    with finitely presented groups.",
-
-PackageWWWHome := "http://www.math.rwth-aachen.de/~Volkmar.Felsch/itc",
 
 PackageDoc := rec(
   BookName := "ITC",
