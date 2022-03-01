@@ -6,8 +6,9 @@ SetPackageInfo( rec(
 
 PackageName := "ITC",
 Subtitle := "Interactive Todd-Coxeter",
-Version := "1.5",
-Date := "13/06/2018",
+Version := "1.5.1",
+Date := "01/03/2022", # dd/mm/yyyy format
+License := "GPL-2.0-or-later",
 
 Persons := [
   rec(
