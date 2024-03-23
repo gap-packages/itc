@@ -12,13 +12,12 @@ in various windows exactly what is happening.
 Note that the ITC package cannot be loaded from GAP, but only from XGAP.
 Hence it requires the XGAP package.
 
-To install the ITC package, just unpack the file 'itc-1p4.zoo' in the
+To install the ITC package, just unpack the file 'itc.tar.gz' in the
 pkg subdirectory of your GAP installation (or in the pkg subdirectory of
 any other GAP root directory) with the following command:
 
-   unzoo -x itc-1p4.zoo
+    tar -xvf itc-1p4.tar.gz
 
 Then you can load the ITC package in an XGAP session by the command
 
-   gap> LoadPackage( "itc" );
-
+    gap> LoadPackage( "itc" );
