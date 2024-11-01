@@ -75,7 +75,6 @@ PackageDoc := rec(
   PDFFile := "doc/manual.pdf",
   SixFile := "doc/manual.six",
   LongTitle := "Interactive Todd-Coxeter computations",
-  Autoload := true
 ),
 
 Dependencies := rec(
@@ -104,8 +103,6 @@ BannerString := Concatenation(
     "          Loading  ITC ", ~.Version, "  (", ~.Subtitle, ")\n",
     "            by V. Felsch, L. Hippe, and J. Neubueser\n",
     "              (", ~.Persons[1].Email, ")\n\n" ),
-
-Autoload := false,
 
 #TestFile := "tst/testall.g",
 
